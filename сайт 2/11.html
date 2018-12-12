@@ -1,0 +1,101 @@
+<html>
+<body>
+<input type="text" value="" id="quantity" onchange="show()" onkeyCode=13="shown()">
+<button onclick="shown()">Alert!</button>
+</br>
+<input type="text" value="" id="quan" onchange="show()" onkeyCode=13="shown()">
+<button onclick="show3()"> + </button>
+<button onclick="show4()"> - </button>
+<button onclick="show5()"> * </button>
+<button onclick="show6()"> / </button>
+<button onclick="show8()"> ^ </button>
+</br>
+</br>
+
+<label>Repeat first input:</label>
+</br>
+<div style="color:red">
+<label id="lab" value=""></label>
+</div>
+</br>
+
+<label>Repeat second input:</label>
+</br>
+<div style="color:red">
+<label id="lab3" value=""></label>
+</div>
+</br>
+</br>
+<label id="lab2" value=""></label>
+
+<script>
+function show(){
+var lol=document.getElementById("quantity").value;
+var l=document.getElementById("lab");
+l.innerHTML=lol;
+var lolo=document.getElementById("quan").value;
+var lo=document.getElementById("lab3");
+lo.innerHTML=lolo;
+}
+setInterval(show,5);
+
+function shown(){
+var lol=document.getElementById("quantity").value;
+var lolo=document.getElementById("quan").value;
+alert(lol +" "+ lolo);
+}
+
+function show3(){
+var a=Number(document.getElementById("quantity").value);
+var b=Number(document.getElementById("quan").value);
+var c=a+b;
+var l=document.getElementById("lab2");
+l.innerHTML=c;
+}
+
+function show4(){
+var a=Number(document.getElementById("quantity").value);
+var b=Number(document.getElementById("quan").value);
+var c=a-b;
+var l=document.getElementById("lab2");
+l.innerHTML=c;
+}
+
+function show5(){
+var a=Number(document.getElementById("quantity").value);
+var b=Number(document.getElementById("quan").value);
+var c=a*b;
+var l=document.getElementById("lab2");
+l.innerHTML=c;
+}
+
+function show6(){
+var a=Number(document.getElementById("quantity").value);
+var b=Number(document.getElementById("quan").value);
+var c=a/b;
+var l=document.getElementById("lab2");
+l.innerHTML=c;
+}
+
+function show8(){
+var a=Number(document.getElementById("quantity").value);
+var b=Number(document.getElementById("quan").value);
+var c=Math.pow(a,b);
+var l=document.getElementById("lab2");
+l.innerHTML=c;
+}
+
+/*switch (lol){
+case 1:
+lol="I";
+break;
+}*/
+</script>
+
+<style>
+lab{
+bgcolor:red;
+}
+</style>
+
+</html>
